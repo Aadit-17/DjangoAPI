@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction based on random data set</title>
+</head>
+<body>
+    <h1>Prediction based on random data set using Decision Tree Classifier</h1>
+    <hr>
+    {% if result %}
+        <h2>The ML model predicts this input to belong to {{result}}</h2>
+    {% endif %}
+    <form action="" method = "POST">
+        {% csrf_token %}
+        input1 : <input type="number" name="input1" required><br>
+        input2 : <input type="number" name="input2" required><br>
+        input3 : <input type="number" name="input3" required><br>
+        input4 : <input type="number" name="input4" required><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
